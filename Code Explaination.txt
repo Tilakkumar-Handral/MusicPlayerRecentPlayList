@@ -20,11 +20,18 @@ To test the logic, you can use a testing framework like JUnit and write some tes
 The "RecentlyPlayedSongsStoreTest" class has following methods to test the use-cases
 
 The "setUp()" method creates a new RecentlyPlayedSongsStore object with a capacity of 3. 
-The "testEmptyList()" method tests that an empty list is returned when there are no recently played songs for a user. 
-The "testRecordAndGetSongs()", "testRecordAndGetSongs2()", "testRecordAndGetSongs3()", "testRecordAndGetSongs4()" method records some songs played by Tilak and tests that the list of recent songs 
-returned by the "getRecentSongs()" method is correct.
 
-I hope this helps! Let me know if you have any questions.
+The "testEmptyList()" method tests that an empty list is returned when there are no 
+	recently played songs for a user. 
+
+The "testRecordAndGetSongs()", 
+	"testRecordAndGetSongs2()", 
+	"testRecordAndGetSongs3()", 
+	"testRecordAndGetSongs4()" 
+	method records some songs played by Tilak and tests that the list of recent songs 
+	returned by the "getRecentSongs()" method is correct.
+
+
 
 
 
