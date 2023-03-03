@@ -21,7 +21,7 @@ public class RecentlyPlayedSongsStoreTest {
 
     @Test
     public void testEmptyList() {
-        List<String> songs = store.getRecentSongs("Alice");
+        List<String> songs = store.getRecentSongs("Tilak");
         assertEquals(Collections.emptyList(), songs);
     }
 
@@ -31,12 +31,12 @@ public class RecentlyPlayedSongsStoreTest {
      * The play list would look like -> S1,S2,S3
      * */   
     public void testRecordAndGetSongs() {
-        store.recordSong("Alice", "S1");
-        store.recordSong("Alice", "S2");
-        store.recordSong("Alice", "S3");
+        store.recordSong("Tilak", "S1");
+        store.recordSong("Tilak", "S2");
+        store.recordSong("Tilak", "S3");
         
 
-        List<String> songs = store.getRecentSongs("Alice");
+        List<String> songs = store.getRecentSongs("Tilak");
         assertEquals(Arrays.asList("S1", "S2", "S3"), songs);
     }
    
@@ -47,12 +47,12 @@ public class RecentlyPlayedSongsStoreTest {
      *When S4 song is played play list would look like -> S2,S3,S4 
      * */
     public void testRecordAndGetSongs2() {
-    	store.recordSong("Alice", "S1");
-        store.recordSong("Alice", "S2");
-        store.recordSong("Alice", "S3");
-        store.recordSong("Alice", "S4");
+    	store.recordSong("Tilak", "S1");
+        store.recordSong("Tilak", "S2");
+        store.recordSong("Tilak", "S3");
+        store.recordSong("Tilak", "S4");
         
-        List<String> songs = store.getRecentSongs("Alice");
+        List<String> songs = store.getRecentSongs("Tilak");
         assertEquals(Arrays.asList("S2", "S3", "S4"), songs);
     }
     
@@ -63,13 +63,13 @@ public class RecentlyPlayedSongsStoreTest {
      *When S2 song is played play list would look like -> S3,S4,S2
      * */
     public void testRecordAndGetSongs3() {
-    	store.recordSong("Alice", "S1");
-        store.recordSong("Alice", "S2");
-        store.recordSong("Alice", "S3");
-        store.recordSong("Alice", "S4");
-        store.recordSong("Alice", "S2");
+    	store.recordSong("Tilak", "S1");
+        store.recordSong("Tilak", "S2");
+        store.recordSong("Tilak", "S3");
+        store.recordSong("Tilak", "S4");
+        store.recordSong("Tilak", "S2");
         
-        List<String> songs = store.getRecentSongs("Alice");
+        List<String> songs = store.getRecentSongs("Tilak");
         assertEquals(Arrays.asList("S3", "S4", "S2"), songs);
     }
     
@@ -80,15 +80,15 @@ public class RecentlyPlayedSongsStoreTest {
      *When S1 song is played play list would look like-> S4,S2,S1
      * */
     public void testRecordAndGetSong4() {
-    	store.recordSong("Alice", "S1");
-        store.recordSong("Alice", "S2");
-        store.recordSong("Alice", "S3");
-        store.recordSong("Alice", "S4");
-        store.recordSong("Alice", "S2");
-        store.recordSong("Alice", "S1");
+    	store.recordSong("Tilak", "S1");
+        store.recordSong("Tilak", "S2");
+        store.recordSong("Tilak", "S3");
+        store.recordSong("Tilak", "S4");
+        store.recordSong("Tilak", "S2");
+        store.recordSong("Tilak", "S1");
 
         
-        List<String> songs = store.getRecentSongs("Alice");
+        List<String> songs = store.getRecentSongs("Tilak");
         assertEquals(Arrays.asList("S4", "S2", "S1"), songs);
     }
     

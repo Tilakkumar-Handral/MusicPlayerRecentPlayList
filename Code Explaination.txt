@@ -1,0 +1,37 @@
+The "RecentlyPlayedSongsStore" class has a constructor that takes an integer capacity as an argument, 
+which represents the maximum number of songs that can be stored per user. 
+
+It also has two methods:
+
+	- "recordSong(String user, String song)" : 
+			Records a song that was played by a user. 
+			If the user has already played capacity songs, the least recently played song is removed. 
+			This method is synchronized to ensure that it is thread-safe.
+	
+	
+	- "getRecentSongs(String user)" : 
+			Retrieves the list of capacity most recently played songs for a given user. 
+			If the user has not played any songs, an empty list is returned. 
+			This method is also synchronized.
+			
+			
+To test the logic, you can use a testing framework like JUnit and write some test cases. 
+
+The "RecentlyPlayedSongsStoreTest" class has following methods to test the use-cases
+
+The "setUp()" method creates a new RecentlyPlayedSongsStore object with a capacity of 3. 
+
+The "testEmptyList()" method tests that an empty list is returned when there are no 
+	recently played songs for a user. 
+
+The "testRecordAndGetSongs()", 
+	"testRecordAndGetSongs2()", 
+	"testRecordAndGetSongs3()", 
+	"testRecordAndGetSongs4()" 
+	method records some songs played by Tilak and tests that the list of recent songs 
+	returned by the "getRecentSongs()" method is correct.
+
+
+
+
+
